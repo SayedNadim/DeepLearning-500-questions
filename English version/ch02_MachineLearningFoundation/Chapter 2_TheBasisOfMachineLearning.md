@@ -276,9 +276,9 @@ Explain in detail below:
 ### 2.10.2 Principle of cost function
 In the regression problem, the cost function is used to solve the optimal solution, and the square error cost function is commonly used. There are the following hypothetical functions:
 
-$$
+$
 h(x) = A + Bx
-$$
+$
 
 Suppose there are two parameters, $A$ and $B$, in the function. When the parameters change, it is assumed that the function state will also change.
 As shown below:
@@ -287,9 +287,9 @@ As shown below:
 
 To fit the discrete points in the graph, we need to find the best $A$ and $B$ as possible to make this line more representative of all the data. How to find the optimal solution, which needs to be solved using the cost function, taking the squared error cost function as an example, assuming the function is $h(x)=\theta_0x$.
 The main idea of ​​the square error cost function is to make the difference between the value given by the actual data and the corresponding value of the fitted line, and find the difference between the fitted line and the actual line. In practical applications, in order to avoid the impact of individual extreme data, a similar variance is used to take one-half of the variance to reduce the impact of individual data. Therefore, the cost function is derived:
-$$
+$
 J(\theta_0, \theta_1) = \frac{1}{m}\sum_{i=1}^m(h(x^{(i)})-y^{(i)})^2
-$$
+$
 
 **The optimal solution is the minimum value of the cost function**$\min J(\theta_0, \theta_1) ​$. If it is a parameter, the cost function is generally visualized by a two-dimensional curve. If it is 2 parameters, the cost function can see the effect through the 3D image. The more parameters, the more complicated.
 When the parameter is 2, the cost function is a three-dimensional image.
@@ -303,18 +303,18 @@ As long as the objective function of the design has a lower bound, it is basical
 ### 2.10.4 Common cost function?
 1. **quadratic cost**:
 
-$$
+$
 J = \frac{1}{2n}\sum_x\Vert y(x)-a^L(x)\Vert^2
-$$
+$
 
 Where $J$ represents the cost function, $x$ represents the sample, $y$ represents the actual value, $a$ represents the output value, and $n$ represents the total number of samples. Using a sample as an example, the secondary cost function is:
-$$
+$
 J = \frac{(y-a)^2}{2}
-$$
+$
 If Gradient descent is used to adjust the size of the weight parameter, the gradient of weight $w$ and offset $b$ is derived as follows:
-$$
+$
 \frac{\partial J}{\partial b}=(a-y)\sigma'(z)
-$$
+$
 Where $z ​$ represents the input of the neuron and $\sigma ​$ represents the activation function. The gradient of the weight $w ​$ and offset $b ​$ is proportional to the gradient of the activation function. The larger the gradient of the activation function, the faster the weights $w ​$ and offset $b ​$ are adjusted. The faster the training converges.
 
 *Note*: The activation function commonly used in neural networks is the sigmoid function. The curve of this function is as follows:
